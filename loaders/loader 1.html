@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<style>
+		body
+		{
+			background: #172727;
+		}
+		.loadercon
+		{
+			height: 200px;
+			width: 200px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.main
+		{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			border: 10px solid transparent;
+			border-top: 10px solid dodgerblue;
+			border-left: 10px solid dodgerblue;
+			animation: any1 1s linear infinite;
+		}
+		.main2
+		{
+			position: absolute;
+			width: 150px;
+			height: 150px;
+			top: 25px;
+			left: 25px;
+			border-radius: 50%;
+			border: 10px solid transparent;
+			border-bottom: 10px solid yellow;
+			border-left: 10px solid yellow;
+			animation: any2 2s linear infinite;
+		}
+		.main1
+		{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			left: 50px;
+			top: 50px;
+			border-radius: 50%;
+			border: 10px solid transparent;
+			border-top: 10px solid red;
+			border-right: 10px solid red;
+			animation: any1 1s linear infinite;
+		}
+		.main3
+		{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			left: 75px;
+			top: 75px;
+			border-radius: 50%;
+			border: 10px solid transparent;
+			border-top: 10px solid orange;
+			border-right: 10px solid orange;
+			animation: any2 1s linear infinite;
+		}
+		@keyframes any1
+		{
+			0%
+			{
+				transform: rotate(0deg);
+			}
+			100%
+			{
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes any2
+		{
+			0%
+			{
+				transform: rotate(0deg);
+			}
+			100%
+			{
+				transform: rotate(-360deg);
+			}
+		}
+	</style>
+	<div class="loadercon" id="loadercon">
+		<div class="main"></div>
+		<div class="main2"></div>
+		<div class="main1"></div>
+		<div class="main3"></div>
+		<div class="main4"></div>
+	</div>
+</body>
+</html>
