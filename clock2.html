@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			min-height: 100vh;
+			background: lightgrey;
+
+		}
+		.clock
+		{
+			width: 350px;
+			height: 350px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 8px solid #fff;
+			border-radius: 15px;
+			box-shadow: inset 7px 7px 15px rgba(0,0,0,0.7),
+							  7px 7px 15px rgba(0,0,0,0.7),
+							  inset -7px -7px 15px white,
+							  -7px -7px 15px white;
+			border-radius: 50%;			
+		}
+		.clock:before
+		{
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			background: #2196f3;
+			z-index: 10000;
+			border-radius: 50%;
+		}
+		.hour,
+		.min,
+		.sec
+		{
+			position: absolute;
+		}
+		.hour, .hr
+		{
+			width: 200px;
+			height: 200px;
+		}
+		.min, .mn
+		{
+			width: 230px;
+			height: 230px;
+		}
+		.sec, .sc
+		{
+			width: 250px;
+			height: 250px;
+		}
+		.hr, .mn, .sc
+		{
+			display: flex;
+			justify-content: center;
+			position: absolute;
+		}
+		.hr:before
+		{
+			content: '';
+			position: absolute;
+			width: 8px;
+			height: 100px;
+			background: #000;
+			box-shadow: 0 0 7px rgba(0,0,0,0.7);
+		}
+		.mn:before
+		{
+			content: '';
+			position: absolute;
+			width: 4px;
+			height: 110px;
+			background: #000;
+			box-shadow: 0 0 7px rgba(0,0,0,0.7);
+		}
+		.sc:before
+		{
+			content: '';
+			position: absolute;
+			width: 2px;
+			height: 120px;
+			background: red;
+			box-shadow: 0 0 7px rgba(0,0,0,0.7);
+		}
+	</style>
+	<div class="clock">
+		<div class="hour">
+			<div class="hr" id="hr"><!--This id used in js--></div>
+		</div>
+		<div class="min">
+			<div class="mn" id="mn"><!--This id used in js--></div>
+		</div>
+		<div class="sec">
+			<div class="sc" id="sc"><!--This id used in js--></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function rotateClock() {
+			with (new Date()) {
+			h = 30 * ((getHours() % 12) + getMinutes() / 60);
+			m = 6 * getMinutes();
+			s = 6 * getSeconds();
+			sc.style.cssText = "transform:rotate(" + s + "deg);"; //there sc mean id="sc"
+			mn.style.cssText = "transform:rotate(" + m + "deg);"; //there mn mean id="mn"
+			hr.style.cssText = "transform:rotate(" + h + "deg);"; //there hr mean id="hr"
+			setTimeout(rotateClock, 1000);
+
+		}
+
+		}
+		window.onload = rotateClock;
+	</script>
+</body>
+</html>

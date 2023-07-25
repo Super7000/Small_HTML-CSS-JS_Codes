@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		body
+		{
+			background: #001;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+		.main
+		{
+			width: 500px;
+			height: 500px;
+			position: absolute;
+			top: 60%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.conhour,.conmin,.consec
+		{
+			width: 150px;
+			height: 150px;
+			float: left;
+			-webkit-box-reflect: below 5px linear-gradient(#0001,#0004);
+			margin: 0 7px;
+			font-size: 4em;
+			font-family: verdana;
+			text-align: center;
+			color: #fff;
+		}
+		.conhour,.conmin
+		{
+			background: dodgerblue;
+		}
+		.consec
+		{
+			background: #ff006a;
+		}
+		.ht,.mt,.st
+		{
+			position: relative;
+			top: 40%;
+			transform: translate(0,-50%);
+		}
+		.hour,.minutes,.seconds
+		{
+			width: 150px;
+			height: 35px;
+			position: relative;
+			font-size: 22px;
+			top: 37px;
+			box-shadow: inset 0 0 0 2px rgba(0,0,0,0.1)
+		}
+		.hour,.minutes
+		{
+			background: #127fd6;
+		}
+		.seconds
+		{
+			background: #ec0062;
+		}
+		.tpara
+		{
+			font-size: 1.5em;
+			color: #fff;
+			text-align: center;
+			font-family: verdana;
+			letter-spacing: 10px;
+		}
+	</style>
+	<div class="main">
+		<p class="tpara"><b>THE TIME IS NOW</b></p>
+		<div class="conhour">
+			<div class="ht" id="ht">00</div>
+			<div class="hour">Hour</div>
+		</div>
+		<div class="conmin">
+			<div class="mt" id="mt">00</div>
+			<div class="minutes">Minutes</div>
+		</div>
+		<div class="consec">
+			<div class="st" id="st">00</div>
+			<div class="seconds">Second</div>
+		</div>
+	</div>
+	<script>
+		function clock(){
+			var hours = document.getElementById('ht');
+			var minutes = document.getElementById('mt');
+			var seconds = document.getElementById('st')
+			var h = new Date().getHours();
+			var m = new Date().getMinutes();
+			var s = new Date().getSeconds();
+			hours.innerHTML = h;
+			minutes.innerHTML = m;
+			seconds.innerHTML = s;
+		}
+		var interval = setInterval(clock, 1000)
+	</script>
+</body>
+</html>

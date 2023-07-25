@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.scene
+		{
+			width: 200px;
+			height: 200px;
+			perspective: 600px;
+			position: absolute;
+			top: calc(50% - 100px);
+			left: calc(50% - 100px);
+		}
+		.cube
+		{
+			position: relative;
+			transform-style: preserve-3d;
+			animation: rotate 5s linear infinite;
+		}
+		.cube_
+		{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			opacity: 0.3;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 25px;
+			color: #fff;
+			transition: 0.3s;
+			border: 2px solid #000;
+		}
+		.front
+		{
+			background: red;
+			transform: translateZ(100px);
+		}
+		.top
+		{
+			background: dodgerblue;
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.left
+		{
+			background: purple;
+			transform: rotateY(90deg) translateZ(-100px);
+		}
+		.right
+		{
+			background: yellow;
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.bottom
+		{
+			background: orange;
+			transform: rotateX(90deg) translateZ(-100px);
+		}
+		.back
+		{
+			background: lightgreen;
+			transform: translateZ(-100px);
+		}
+		@keyframes rotate
+		{
+			0%
+			{
+				transform: rotateY(0deg);
+			}			
+			100%
+			{
+				transform: rotateY(360deg);
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		function change() {
+			var a = document.getElementById('front');
+			var b = document.getElementById('top');
+			var c = document.getElementById('left');
+			var d = document.getElementById('right');
+			var e = document.getElementById('bottom');
+			var f = document.getElementById('back');
+			a.style.cssText = 'transform: translateZ(150px);';
+			b.style.cssText = 'transform: rotateX(90deg) translateZ(150px);';
+			c.style.cssText = 'transform: rotateY(90deg) translateZ(-150px);';
+			d.style.cssText = 'transform: rotateY(90deg) translateZ(150px);';
+			e.style.cssText = 'transform: rotateX(90deg) translateZ(-150px);';
+			f.style.cssText = 'transform: translateZ(-150px);';
+		}
+		function stop_change() {
+			var a = document.getElementById('front');
+			var b = document.getElementById('top');
+			var c = document.getElementById('left');
+			var d = document.getElementById('right');
+			var e = document.getElementById('bottom');
+			var f = document.getElementById('back');
+			a.style.cssText = 'transform: translateZ(100px);';
+			b.style.cssText = 'transform: rotateX(90deg) translateZ(100px);';
+			c.style.cssText = 'transform: rotateY(90deg) translateZ(-100px);';
+			d.style.cssText = 'transform: rotateY(90deg) translateZ(100px);';
+			e.style.cssText = 'transform: rotateX(90deg) translateZ(-100px);';
+			f.style.cssText = 'transform: translateZ(-100px);';
+		}
+	</script>
+</head>
+<body>
+	<div class="scene">
+		<div class="cube" onmousemove="change();" onmouseleave="stop_change()">
+			<div class="cube_ front" id="front">front</div>
+			<div class="cube_ top" id="top">top</div>
+			<div class="cube_ left" id="left">left</div>
+			<div class="cube_ right" id="right">right</div>
+			<div class="cube_ bottom" id="bottom">bottom</div>
+			<div class="cube_ back" id="back">back</div>
+		</div>
+	</div>
+</body>
+</html>

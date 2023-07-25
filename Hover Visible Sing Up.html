@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	body
+	{
+		background: linear-gradient(-45deg,violet,pink,#fff);
+		min-height: 100vh;
+	}
+	.show-hide
+	{
+		height: 70px;
+		width: 70px;
+		position: absolute;
+		bottom: 70px;
+		left: 50px;
+		-webkit-appearance: none;
+		outline: none;
+	}
+	.show-hide:before
+	{
+		content: '';
+		height: 70px;
+		width: 70px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #fff;
+		border-radius: 50%;
+		z-index: -2;
+	}
+	.show-hide:after
+	{
+		content: '+';
+		font-size: 5em;
+		color: violet;
+		position: absolute;
+		left: 14px;
+		top: -2px;
+		text-shadow: 0 0 5px #fff;
+		z-index: -1;
+		transition: 1s;
+	}
+	.show-hide:checked:after
+	{
+		transform: rotate(135deg);
+	}
+	.container
+	{
+		width: 350px;
+		height: 350px;
+		background: #fff;
+		position: absolute;
+		top: 50%;
+		left: 0%;
+		transform: translate(-50%,-50%);
+		border-radius: 20px;
+		opacity: 0;
+		transition: 1s;
+	}
+	div h1
+	{
+		font-family: verdana;
+		color: lightblue;
+	}
+	.email,.password
+	{
+		width: 80%;
+		height: 40px;
+		border-radius: 10px;
+		position: relative;
+		font-size: 18px;
+		border: 2px solid lightblue;
+		outline: none;
+	}
+	.email
+	{
+		top: 30px;
+	}
+	.password
+	{
+		top: 60px;
+	}
+	.email:active
+	{
+		border: 2px solid dodgerblue;
+	}
+	.next
+	{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		background: lightblue;
+		text-decoration: none;
+		font-size: 20px;
+		font-family: verdana;
+		color: #fff;
+		position: relative;
+		top: 110px;
+		border-radius: 10px;
+	}
+	.show-hide:checked ~ .container
+	{
+		left: 50%;
+		opacity: 1;
+	}
+</style>
+<body>
+	<input type="checkbox" class="show-hide" name="">
+	<div class="container">
+		<center>
+			<h1>Sign Up</h1>
+			<input type="email" name="" class="email" placeholder="Type Your E-mail Address">
+			<input type="password" name="" class="password" placeholder="Type Password">
+			<a href="#" class="next">Next</a>
+		</center>
+	</div>
+</body>
+</html>

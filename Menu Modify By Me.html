@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		body
+		{
+			margin: 0;
+			padding: 0;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+		.main
+		{
+			position: absolute;
+			top: 40%;
+		}
+		.f,.s,.t
+		{
+			float: left;
+			padding: 50px;
+		}
+		.f:before,.s:before,.t:before
+		{
+			content: '';
+			position: absolute;
+			top: 125px;
+			background: gold;
+			height: 4px;
+			width: 10px;
+			opacity: 0;
+			transition: 1s;
+		}
+		.f:hover:before,.s:hover:before,.t:hover:before
+		{
+			top: 90px;
+			opacity: 1;
+		}
+		.f:before
+		{
+			left: 80px;
+		}
+		.f:hover:before
+		{
+			width: 70px;
+			left: 45px;
+		}
+		.s:before
+		{
+			left: 250px;
+		}
+		.s:hover:before
+		{
+			width: 100px;
+			left: 207px;
+		}
+		.t:before
+		{
+			left: 440px;
+		}
+		.t:hover:before
+		{
+			width: 95px;
+			left: 400px;
+		}
+		a
+		{
+			font-size: 2em;
+			text-decoration: none;
+		}		
+	</style>
+	<div class="main">
+		<div class="f">
+			<a href="#">First</a>
+		</div>
+		<div class="s">
+			<a href="#">Second</a>
+		</div>
+		<div class="t">
+			<a href="#">Thired</a>
+		</div>
+	</div>
+</body>
+</html>

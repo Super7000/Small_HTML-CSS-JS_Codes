@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.container
+		{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 300px;
+			height: 90px;
+			border-radius: 45px;
+			cursor: pointer;
+			background: rgba(0,0,0,0.2);
+			transition: 3s;
+			border-bottom: 1px solid rgba(0,0,0,0.4);
+			border-top: 1px solid rgba(0,0,0,0.4);			
+		}
+		.container:before
+		{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -20px;
+			width: 55%;
+			height: 100%;
+			transition: 0.5s;
+			overflow: hidden;
+			transform: skewX(45deg);
+			background: linear-gradient(to left,rgba(255,255,255,0.7),transparent);
+
+
+		}
+		.container:hover:before
+		{
+			width: 115%;
+			height: 100px;
+		}
+		.container:after
+		{
+			content: '';
+			width: 50px;
+			height: 20px;
+			background: red;
+			position: absolute;
+			bottom: -7px;
+			left: calc(50% - 25px);
+			border-radius: 10px;
+			z-index: -2;
+		}
+		.btn
+		{
+			font-size: 35px;
+			font-family: verdana;
+			position: absolute;
+			top: 50%;
+			left: 50px;
+			transform: translate(0%,-50%);
+			transition: 0.5s;
+			cursor: pointer;
+		}
+		.btn:hover
+		{
+			letter-spacing: 4px;
+			left: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="btn">Read More</div>
+	</div>
+</body>
+</html>

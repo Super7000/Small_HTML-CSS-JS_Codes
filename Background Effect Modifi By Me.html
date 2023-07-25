@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+	*
+	{
+		margin: 0;
+		padding: 0;
+	}
+	body
+	{
+		background: #000;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.main
+	{
+		position: absolute;
+		top: 30%;
+	}
+	.firs,.seco,.thir,.fort,.five
+	{
+		padding: 30px;
+		height: 40px;
+		cursor: pointer;
+		text-align: center;
+		float: left;
+	}
+	.firs:before,.seco:before,.thir:before,.fort:before,.five:before
+	{
+		position: absolute;
+		left: 30%;
+		top: 50%;
+		content: '';
+		transition: 0.5s;
+	}
+	.firs:hover:before,.seco:hover:before,.thir:hover:before,.fort:hover:before,.five:hover:before
+	{
+		position: absolute;
+		top: -50px;
+		font-size: 10em;
+		opacity: 0.7;
+		z-index: -1;
+	}
+	.firs:hover:before
+	{
+		background: pink;
+		left: 30%;
+		content: 'First';
+		box-shadow: 0 0 15px 1000vh pink;
+	}
+	.seco:hover:before
+	{
+		background: lightblue;
+		left: 20%;
+		content: 'Second';
+		box-shadow: 0 0 15px 1000vh lightblue;
+	}
+	.thir:hover:before
+	{
+		background: orange;
+		left: 20%;
+		content: 'Thired';
+		box-shadow: 0 0 15px 1000vh orange;
+	}
+	.fort:hover:before
+	{
+		background: yellow;
+		left: 30%;
+		content: 'Forth';
+		box-shadow: 0 0 15px 1000vh yellow;
+	}
+	.five:hover:before
+	{
+		background: lightgreen;
+		left: 30%;
+		content: 'Five';
+		box-shadow: 0 0 15px 1000vh lightgreen;
+	}
+	a
+	{
+		font-size: 2em;
+		text-decoration: none;
+		color: black;
+		z-index: -2;
+	}
+	.firs:after,.seco:after,.thir:after,.fort:after,.five:after
+	{
+		content: '';
+		position: absolute;
+		background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3d,#03a9f4);
+		background-size: 500%;
+		height: 3px;
+		top: 90px;
+		width: 10px;
+		transition: 1s;
+		opacity: 0;
+		border-radius: 1.5px;
+		animation: animate 10s linear infinite;
+	}
+	@keyframes animate{0%{background-position: 0%}100%{background-position: 500%}}
+	.firs:hover:after,.seco:hover:after,.thir:hover:after,.fort:hover:after,.five:hover:after
+	{
+		top: 70px;
+		opacity: 1;
+	}
+	.firs:after
+	{
+		left: 60px;
+	}
+	.seco:after
+	{
+		left: 180px;
+	}
+	.thir:after
+	{
+		left: 340px;
+	}
+	.fort:after
+	{
+		left: 480px;
+	}
+	.five:after
+	{
+		left: 605px;
+	}
+	.firs:hover:after
+	{
+		left: 25px;
+		width: 70px;
+	}
+	.seco:hover:after
+	{
+		left: 147px;
+		width: 100px;
+	}
+	.thir:hover:after
+	{
+		left: 300px;
+		width: 95px;
+	}
+	.fort:hover:after
+	{
+		left: 445px;
+		width: 80px;
+	}
+	.five:hover:after
+	{
+		left: 575px;
+		width: 65px;
+	}
+	</style>
+	<div class="main">
+		<div class="firs">
+			<a href="#" style="color: pink">First</a>
+		</div>
+		<div class="seco">
+			<a href="#" style="color: lightblue">Second</a>
+		</div>
+		<div class="thir">
+			<a href="#" style="color: orange">Thired</a>
+		</div>
+		<div class="fort">
+			<a href="#" style="color: yellow">Forth</a>
+		</div>
+		<div class="five">
+			<a href="#" style="color: lightgreen">Five</a>
+		</div>
+	</div>
+
+</body>
+</html>

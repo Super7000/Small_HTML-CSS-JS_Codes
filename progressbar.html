@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		body
+		{margin: 0;
+		 padding: 0;
+		  background: lightblue;}
+		.skillbox
+		{position: relative;
+		 width: 600px;
+		  padding: 50px;
+		   margin: 100px auto;}
+		h1
+		{margin: 0 0 20px;
+		 padding: 0;
+		  color: #fff;}
+		.skills
+		{position: relative;
+		 margin-bottom: 20px;
+		  width: 100%}
+		.pro
+		{width: 100%;
+		 height: 20px;
+		  border-radius: 10px;
+		   border: 2px solid #000;
+		    text-align: center;
+		     line-height: 22px;
+		      color: #fff;
+		       overflow: hidden;}
+		.per
+		{text-align: center;
+		 color: #000;
+		  padding-right: 10px;
+		   border-right: 2px solid#000;
+		    animation: animate .5s linear infinite; background: linear-gradient(45deg, rgba(255,255,255,.5) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.5) 75%, transparent 75%, transparent);
+		     background-size: 50px 50px;}
+		@keyframes animate
+		{0%{background-position: 0 0;}
+		100%{background-position: 50px 0}}
+	</style>
+	<div class="skillbox">
+		<h1>Skills</h1>
+		<div class="skills">
+			<div class="pro">
+				<div class="per" style="width: 90%">90%</div>
+			</div>
+		</div>
+		<h2>Html</h2>
+		<div class="skills">
+			<div class="pro">
+				<div class="per" style="width: 85%">85%</div>
+			</div>
+		</div>
+		<h2>Css</h2>
+		<div class="skills">
+			<div class="pro">
+				<div class="per" style="width: 30%">30%</div>
+			</div>
+		</div>
+		<h2>Javascript</h2>
+		<div class="skills">
+			<div class="pro">
+				<div class="per" style="width: 10%">10%</div>
+			</div>
+		</div>
+		<h2>Photoshop</h2>
+	</div>
+
+</body>
+</html>
